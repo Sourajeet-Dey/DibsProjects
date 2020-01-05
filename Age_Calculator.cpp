@@ -1,9 +1,10 @@
 //Program to check your age till date
 
 
-#include<iostream.h>
+#include<bits/stdc++.h>
 #include<conio.h>
-void main()
+using namespace std;
+int main()
 {
 int birth_month,birth_year;
 int current_month,current_year;
@@ -19,8 +20,20 @@ cout<<"\nEnter The Current Month(Eg:12): ";
 cin>>current_month;
 cout<<"\nEnter The Current Year(Eg:2020): ";
 cin>>current_year;
-ageinyear= ;
-ageinmonth= ;
+/*This is the logic written below:
+if(birth_month>current_month)
+{
+    ageinyear=(current_year-1-birth_year);
+    ageinmonth=(12-birth_month+current_month);
+}
+else
+{
+    ageinyear=(current_year-birth_year);
+    ageinmonth=(current_month-birth_month);
+}*/
+ageinyear=birth_month>current_month?current_year-1-birth_year:current_year-birth_year ;
+ageinmonth=birth_month>current_month?12-birth_month+current_month:current_month-birth_month ;
 cout<<"\n\nYour Age is "<<ageinyear<<" Years And "<<ageinmonth<<" Months ";
 getch();
+return 0;
 }
